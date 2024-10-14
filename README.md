@@ -7,9 +7,9 @@
 <h3 align="center">Data Of Cricketers</h3>
 
   <p align="center">
-    project_description
+    The one program that is going to help you for making a best team!!!
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Vignesh00036/Data-of-cricketers"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/github_username/repo_name">View Demo</a>
