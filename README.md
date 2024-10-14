@@ -100,13 +100,54 @@ For a complete list of all libraries used in this program, please refer to the r
 We have also implemented Snowflake's internal stage for storage purposes, ensuring data security and preventing potential data loss.
 
 ## ETL Journey/Workflow:
-<p>Data Scraping Process</p>
-<p>We utilized the website <strong>www.sadian.com</strong> as our data source for scraping player information. The process involves the following steps:</p>
+<p><b>1. Data Scraping Process (Extract):</b></p>
+<p>We utilized the website <strong>www.sadian.com</strong> as our data source for scraping players information. The process involves the following steps:</p>
 <ul>
-<u><b>1. Website Access:</b></u>
-<p>Our program leverages <strong>Selenium</strong> to open and interact with the <strong>www.sadian.com</strong> website programmatically.</p>
-
-<b><u>2. Data Extraction:</u></b>
-<p>Using <strong>Beautiful Soup</strong>, a powerful Python library, we efficiently scrape the list of players from the website, enabling us to collect the necessary data for analysis.</p>
+<u><b>1. Website Interaction:</b></u>
+<ul>
+    <li>
+    Our program utilizes Selenium to seamlessly access and interact with the website, ensuring efficient data retrieval.
+    </li>
 </ul>
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<b><u>2. Data Extraction:</u></b>
+<ul>
+    <li>
+    Using <strong>Beautiful Soup</strong>, a powerful Python library, we efficiently scrape the list of players from the website along with players links, enabling us to collect the necessary data for analysis.
+    </li>
+    <li>
+    Using Selenium, the program systematically loops through each player's profile link to access individual player details. 
+    </li>
+    <li>
+    Within each profile, the program navigates through four available formats, extracting relevant data from each and storing it in a designated variable for further processing.
+    </li>
+</ul>
+</ul>
+<p><b>2. Data Transforming Process (Transform):</b></p>
+<ul>
+<b><u>1. Data Transformation:</u></b>
+<ul>
+    <li>
+    Using Pandas (Python library), I perform data transformation and cleaning to convert raw data into a well-structured and highly accessible format.
+    </li>
+</ul>
+<b><u>2. Data Validation:</u></b>
+<ul>
+    <li>
+        During data validation, invalid characters are replaced with '0' to ensure data integrity. For example, any instances of '-' identified as invalid are transformed to '0'.
+    </li>
+</ul>
+</ul>
+<p><b>3. Data Loading Process (Load):</b></p>
+<ul>
+<b><u>1. Data Loading:</u></b>
+<ul>
+    <li>
+        Once the data is structured, it is loaded into a database management system using PostgreSQL, where all data is systematically inserted into specific tables for efficient storage and retrieval.
+    </li>
+    <li>
+        After data insertion into specific tables, it is extracted using the COPY command and subsequently uploaded to Snowflake’s internal storage as well as Amazon AWS S3 bucket, ensuring robust data accessibility and backup.
+    </li>
+</ul>
+</ul>
+<p><b>4.  (Load):</b></p>
+
