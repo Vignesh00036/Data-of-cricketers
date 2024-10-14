@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="image/logo.png" alt="Logo" width="80" height="80">
+    <img src="Image/logo.png" alt="Logo" width="80" height="80">
 
 
 <h3 align="center">Data Of Cricketers</h3>
