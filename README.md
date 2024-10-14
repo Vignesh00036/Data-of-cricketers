@@ -70,8 +70,7 @@ The Data of Cricketers program is a comprehensive application designed to collec
 Join us in our program as we guide you step by step through the process of scraping, modifying, and inserting data into a specific table.
 
 ## Built With:
-<b>Programming Languages and Libraries</b>
-<p>Our program is developed using the most efficient programming languages and best libraries in Python to ensure optimal performance and functionality.</p>
+<p>Our program is developed using the most efficient programming languages, robust libraries, and top-tier database management tools to enhance performance and optimize storage solutions.</p>
 
 <b>Languages:</b>
 <ul>
@@ -85,8 +84,20 @@ In this program, we utilized a variety of libraries to enhance functionality and
     <li>Selenium</li>
     <li>Beautiful Soup (bs4)</li>
     <li>Pandas</li>
+    <li>Requests</li>
 </ul>
 For a complete list of all libraries used in this program, please refer to the requirements.txt file available at the following link: <a href='https://github.com/Vignesh00036/Data-of-cricketers/blob/6864cbae8b42e2f54ad27e8f6b25115c93e077d5/Program%20Files/requirements.txt'>Libraries</a>
+
+<b>Tools:</b>
+<ul>
+    <li>Psql</li>
+    <li>Snowflake</li>
+</ul>
+<b>Cloud storage:</b>
+<ul>
+    <li>Amazon aws s3</li>
+</ul>
+We have also implemented Snowflake's internal stage for storage purposes, ensuring data security and preventing potential data loss.
 
 ## ETL Journey/Workflow:
 <p>Data Scraping Process</p>
