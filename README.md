@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
+  <a href="https://github.com/Vignesh00036/Data-of-cricketers">
     <img src="image/logo.png" alt="Logo" width="80" height="80">
   </a>
 
