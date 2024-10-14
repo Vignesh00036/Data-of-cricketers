@@ -86,7 +86,7 @@ In this program, we utilized a variety of libraries to enhance functionality and
     <li>Beautiful Soup (bs4)</li>
     <li>Pandas</li>
 </ul>
-For a complete list of all libraries used in this program, please refer to the requirements.txt file available at the following link: <a href='https://github.com/Vignesh00036/Data-of-cricketers/Program Files/requirements.txt'>Libraries</a>
+For a complete list of all libraries used in this program, please refer to the requirements.txt file available at the following link: <a href='https://github.com/Vignesh00036/Data-of-cricketers/blob/6864cbae8b42e2f54ad27e8f6b25115c93e077d5/Program%20Files/requirements.txt'>Libraries</a>
 
 ## ETL Journey/Workflow:
 <p>Data Scraping Process</p>
