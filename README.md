@@ -138,7 +138,13 @@ We have also implemented Snowflake's internal stage for storage purposes, ensuri
 </ul>
 <p><b>4. Auto Ingest (SQS):</b></p>
 <ul>
+    <li>
     We have established a Snowflake pipeline to facilitate automated data ingestion into specific tables from an S3 bucket, utilizing an SQS notification channel.
+    </li>
 </ul>
 
 ## Contact:
+<ul>Name : Vignesh Elumalai</ul>
+<ul>Email Id : <a href="mailto:vigneshoffl36@gmail.com">vigneshoffl36@gmail.com</a></ul>
+<ul>LinkedIn profile : <a href="www.linkedin.com/in/vignesh-elumalai-2a4684332">Vignesh Elumalai</a></ul>
+
