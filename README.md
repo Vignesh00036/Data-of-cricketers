@@ -23,25 +23,12 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-      <ul>
-        <li><a href="#ETL-Journey">ETL Journey/Workflow</a></li>
-      </ul>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
+    <li><a href="#etl-journeyworkflow">ETL Journey/Workflow</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
-## About The Project
+### About The Project
 The Data of Cricketers program is a comprehensive application designed to collect and analyze cricket statistics from various formats of the game. This innovative platform aims to empower cricket enthusiasts, coaches, and analysts by providing them with real-time insights and historical context about player performances. This program is going to collects and aggregates data from various cricket match formats (T20,IPL,ODI,TEST).
 
 <b><u>Here's Why Our Program Is The Best Program:</h1></b></u>
@@ -149,5 +136,9 @@ We have also implemented Snowflake's internal stage for storage purposes, ensuri
     </li>
 </ul>
 </ul>
-<p><b>4.  (Load):</b></p>
+<p><b>4. Auto Ingest (SQS):</b></p>
+<ul>
+    We have established a Snowflake pipeline to facilitate automated data ingestion into specific tables from an S3 bucket, utilizing an SQS notification channel.
+</ul>
 
+## Contact:
