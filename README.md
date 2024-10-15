@@ -146,5 +146,5 @@ We have also implemented Snowflake's internal stage for storage purposes, ensuri
 ## Contact:
 <ul>Name : Vignesh Elumalai</ul>
 <ul>Email Id : <a href="mailto:vigneshoffl36@gmail.com">vigneshoffl36@gmail.com</a></ul>
-<ul>LinkedIn profile : <a href="www.linkedin.com/in/vignesh-elumalai-2a4684332">Vignesh Elumalai</a></ul>
+<ul>LinkedIn profile : <a href="https://www.linkedin.com/in/vignesh-elumalai-2a4684332">Vignesh Elumalai</a></ul>
 
