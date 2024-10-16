@@ -7,9 +7,9 @@ files =['players_information','odi','test','t20','ipl']
 
 #Method -1
 def upload(team_name):
-    path=f'/media/beast/Beast/DE/Python_programms/1_OG/data/{team_name}'
+    path={folder_to_your_path}
     for idx,i in enumerate(os.listdir(path)):
-        file_path=f'/media/beast/Beast/DE/Python_programms/1_OG/data/{team_name}/{files[idx]}_records.csv'
+        file_path=path/{your_files}
         bucket_name='s3-bucket-for-data'
         s3_path=f'{files[idx]}_records/{files[idx]}_{team_name}.csv'
         s3.upload_file(file_path, bucket_name, s3_path)
