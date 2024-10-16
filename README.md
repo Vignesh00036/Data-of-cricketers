@@ -23,6 +23,7 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
+    <li><a href="#how-to-run">How to run</a></li>
     <li><a href="#etl-journeyworkflow">ETL Journey/Workflow</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
@@ -85,6 +86,10 @@ For a complete list of all libraries used in this program, please refer to the r
     <li>Amazon aws s3</li>
 </ul>
 We have also implemented Snowflake's internal stage for storage purposes, ensuring data security and preventing potential data loss.
+
+## How To Run:
+To execute this program, please ensure that all required Python libraries and tools are installed. For a comprehensive list of necessary libraries, refer to the following link: <a href='https://github.com/Vignesh00036/Data-of-cricketers/blob/6864cbae8b42e2f54ad27e8f6b25115c93e077d5/Program%20Files/requirements.txt'> Libraries</a>. Once the libraries are installed, open the main file located at <a href="https://github.com/Vignesh00036/Data-of-cricketers/blob/fedbc7d9565f24db5d3c0c964377379278737ff0/Program%20Files/main.py"> Main File</a> in your preferred Python environment. I recommend using Visual Studio Code (VS Code) for ease of use. After running the main file, the program will automatically handle the remaining processes.
+
 
 ## ETL Journey/Workflow:
 <p><b>1. Data Scraping Process (Extract):</b></p>
