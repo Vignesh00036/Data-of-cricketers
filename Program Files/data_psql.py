@@ -83,7 +83,7 @@ def update(matches):
 def export(team_name):
     tables=['players_information_records', 'odi_records','test_records','t20_records','ipl_records']
     for table in tables:
-        folder_path=f'/media/beast/Beast/DE/Python_programms/1_OG/data/{team_name}'
+        folder_path={path_to_your_destination}
         select_query=f"select * from {table} where team ilike ('{team_name}')"
         if not os.path.exists(folder_path):
             os.makedirs(folder_path)
