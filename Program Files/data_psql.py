@@ -4,7 +4,7 @@ import os
 
 #creating a connection
 start_time = time.time()
-conn = psycopg2.connect(dbname="cricketers", user="postgres", password="@Beast00036@", host="localhost")
+conn = psycopg2.connect(dbname="your_database_name", user="your_username", password="your_password", host="your_host")
 cursor = conn.cursor()
 
 #sql statement to insert the players information data
