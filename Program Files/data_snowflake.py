@@ -2,12 +2,12 @@ import snowflake.connector
 
 # Establish the connection
 conn = snowflake.connector.connect(
-    user='velumalai36',
-    password='@Beast00036@',
-    account='ts93870.ap-southeast-1',
-    warehouse='COMPUTE_WH',
-    database='CRICKETERS',
-    schema='DATA',
+    user='your_username',
+    password='your_password',
+    account='your_account',
+    warehouse='your_warehouse_name',
+    database='your_database_name',
+    schema='your_schema_name',
 )
 matches=['ODI_RECORDS','TEST_RECORDS','T20_RECORDS','IPL_RECORDS']
 cursor=conn.cursor()
@@ -54,7 +54,7 @@ conn.commit()
 
 def importing_files(team_name):
 	import_statement=f"""
-		PUT file:///media/beast/Beast/DE/Python_programms/1_OG/data/{team_name}/*.csv @my_storage/{team_name}/
+		PUT file:{path_to_your_files} @{path_to_your_destination}
 	"""
 	cursor.execute(import_statement)
 	conn.commit()
