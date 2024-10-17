@@ -21,7 +21,7 @@
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
-        <li><a href="#structure-of-a-databse">Structure of a database</a></li>
+        <li><a href="#structure-of-a-database">Structure of a database</a></li>
       </ul>
     </li>
     <li><a href="#how-to-run">How to run</a></li>
