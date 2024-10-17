@@ -21,6 +21,7 @@
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
+        <li><a href="#structure-of-a-databse">Structure of a database</a></li>
       </ul>
     </li>
     <li><a href="#how-to-run">How to run</a></li>
@@ -86,6 +87,9 @@ For a complete list of all libraries used in this program, please refer to the r
     <li>Amazon aws s3</li>
 </ul>
 We have also implemented Snowflake's internal stage for storage purposes, ensuring data security and preventing potential data loss.
+
+## Structure Of A Database:
+The database schema I’ve developed consists of four tables, each representing a specific cricket match format, with an id column serving as the primary key in each table. A separate table for player information has also been created, which references these primary keys using foreign key constraints to establish relationships. For a detailed view of the structure, you can refer to the data model available through the link provided: <a href="https://github.com/Vignesh00036/Data-of-cricketers/blob/cef7dc87cf51f0b76ed040db0e010feba816ed09/Image/Data_Model.jpg">Data Model</a>
 
 ## How To Run:
 To execute this program, please ensure that all required Python libraries and tools are installed. For a comprehensive list of necessary libraries, refer to the following link: <a href='https://github.com/Vignesh00036/Data-of-cricketers/blob/6864cbae8b42e2f54ad27e8f6b25115c93e077d5/Program%20Files/requirements.txt'> Libraries</a>. Once the libraries are installed, open the main file located at <a href="https://github.com/Vignesh00036/Data-of-cricketers/blob/fedbc7d9565f24db5d3c0c964377379278737ff0/Program%20Files/main.py"> Main File</a> in your preferred Python environment. I recommend using Visual Studio Code (VS Code) for ease of use. After running the main file, the program will automatically handle the remaining processes.
