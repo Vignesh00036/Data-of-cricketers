@@ -68,6 +68,8 @@ def insert_into_players_info(data):
         cursor.execute(player_info_statement, records)
         conn.commit()
 
+#update the foreign key columns in the players_information_records table by retrieving the corresponding ID values from the respective tables, 
+#based on matching player name in both tables, ensuring proper foreign key relationships.
 def update(matches):
     match_type=['odi','test','t20','ipl']
     for idx,match in enumerate(matches):
