@@ -4,7 +4,7 @@ import os
 
 #creating a connection
 start_time = time.time()
-conn = psycopg2.connect(dbname="cricketers", user="postgres", password="@Beast00036@", host="localhost")
+conn = psycopg2.connect(dbname="your_database_name", user="your_username", password="your_password", host="your_host")
 cursor = conn.cursor()
 
 #sql statement to insert the players information data
@@ -84,7 +84,7 @@ def export(team_name):
     tables=['players_information_records', 'odi_records','test_records','t20_records','ipl_records']
     replaced_team_name=team_name.replace(' ', '_')
     for table in tables:
-        folder_path=f'/media/beast/Beast/DE/Python_programms/1_OG/data/{replaced_team_name}'
+        folder_path={your_path}
         select_query=f"select * from {table} where team ilike ('{team_name}')"
         if not os.path.exists(folder_path):
             os.makedirs(folder_path)
