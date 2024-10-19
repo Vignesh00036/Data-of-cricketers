@@ -10,7 +10,7 @@ import data_aws_s3
 import os
 
 start_time = time.time()
-conn = psycopg2.connect(dbname="cricketers", user="postgres", password="@Beast00036@", host="localhost")
+conn = psycopg2.connect(dbname="your_database_name", user="your_username", password="your_password", host="your_host")
 cursor = conn.cursor()
 matches=['ODI_RECORDS','TEST_RECORDS','T20_RECORDS','IPL_RECORDS']
 
