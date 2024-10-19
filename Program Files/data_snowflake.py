@@ -13,6 +13,7 @@ conn = snowflake.connector.connect(
 matches=['ODI_RECORDS','TEST_RECORDS','T20_RECORDS','IPL_RECORDS']
 cursor=conn.cursor()
 
+# Creates tables for match formats
 for match in matches:
 	create_statement_for_records = f""" 
 	CREATE TABLE IF NOT EXISTS {match}(
@@ -36,6 +37,7 @@ for match in matches:
 	"""
 	cursor.execute(create_statement_for_records)
 
+# Creates table for players_information_records
 create_statement_for_players_info=""" 
         CREATE TABLE IF NOT EXISTS PLAYERS_INFORMATION_RECORDS(
             ID int unique autoincrement,
@@ -48,11 +50,11 @@ create_statement_for_players_info="""
             IPL_ID INT UNIQUE REFERENCES IPL_RECORDS(ID), 
             PRIMARY KEY (id));
 	"""
-
 cursor.execute(create_statement_for_players_info)
 conn.commit()
 
 
+# this function imports all files into snowflake internal stage
 def importing_files(team_name):
 	replaced_team_name=team_name.replace(' ', '_')
 	if os.path.exists({your_path}/{replaced_team_name}'):
