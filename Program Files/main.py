@@ -3,17 +3,17 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 import psycopg2
-import time
 import data_collector
 import data_snowflake
 import data_aws_s3
 import os
 
-start_time = time.time()
+# Establish the connection
 conn = psycopg2.connect(dbname="your_database_name", user="your_username", password="your_password", host="your_host")
 cursor = conn.cursor()
 matches=['ODI_RECORDS','TEST_RECORDS','T20_RECORDS','IPL_RECORDS']
 
+# Variables
 team_number = 1
 page_number = 1
 teams=[]
@@ -26,13 +26,15 @@ team_numbers = [
 	1826, 1828, 1835, 1857, 1863, 1865, 1868, 1870, 1872, 2833
 ]
 
+# It is going to return the name and team_number for selected teams
 def return_teams(team):
 	for idx, team_present in enumerate(teams):
 		if int(team)==idx:
 			return team_present,team_numbers[idx]
 		elif team==team_present:
 			return team_present,team_numbers[idx]
-					
+
+# Appending the team teams in teams variable and skipping the under-19 and womens teams
 def teams_data(driver):
 	for i in range(146):
 		team_present=driver.find_element(By.XPATH, f'//*[@id="team{i}"]').get_attribute('value').lower()
@@ -41,6 +43,7 @@ def teams_data(driver):
 			splitted=splitting[0]
 			teams.append(splitted[0].upper()+splitted[1:])
 
+# Creates tables for match formats
 for match in matches:
 	create_statement_for_records = f""" 
 		CREATE TABLE IF NOT EXISTS {match}(
@@ -63,6 +66,7 @@ for match in matches:
 	"""
 	cursor.execute(create_statement_for_records)
 
+# Creates table for players_information_records
 create_statement_for_players_info=""" 
 			CREATE TABLE IF NOT EXISTS PLAYERS_INFORMATION_RECORDS(
 			ID SERIAL PRIMARY KEY,
@@ -77,7 +81,6 @@ create_statement_for_players_info="""
 			) 
 """
 cursor.execute(create_statement_for_players_info)
-
 conn.commit()
 
 chrome_options = Options()
@@ -121,16 +124,3 @@ while how_many_teams:
 			data_snowflake.importing_files(k[0])
 			data_aws_s3.upload(k[0])
 		break
-
-taken_time = time.time()-start_time
-
-if taken_time>3600:
-	remaining_seconds=taken_time%3600
-	minutes=remaining_seconds//60
-	print(f'Took {int(taken_time//3600)}.{int(minutes)} hrs')
-elif taken_time>60:
-    print(f'Took {int(taken_time//60)}.{int(taken_time%60)} mins')
-elif taken_time<1:
-    print(f'Took {round(taken_time/60,4)} m/s')
-else:
-    print(f'Took {round(taken_time,2)} s')
