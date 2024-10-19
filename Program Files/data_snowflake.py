@@ -3,12 +3,12 @@ import os
 
 # Establish the connection
 conn = snowflake.connector.connect(
-    user='velumalai36',
-    password='@Beast00036@',
-    account='ts93870.ap-southeast-1',
-    warehouse='COMPUTE_WH',
-    database='CRICKETERS',
-    schema='DATA',
+    user='your_username',
+    password='your_password',
+    account='your_account',
+    warehouse='your_warehouse',
+    database='your_database',
+    schema='your_schema',
 )
 matches=['ODI_RECORDS','TEST_RECORDS','T20_RECORDS','IPL_RECORDS']
 cursor=conn.cursor()
@@ -55,14 +55,14 @@ conn.commit()
 
 def importing_files(team_name):
 	replaced_team_name=team_name.replace(' ', '_')
-	if os.path.exists(f'///media/beast/Beast/DE/Python_programms/1_OG/data/{replaced_team_name}'):
+	if os.path.exists({your_path}/{replaced_team_name}'):
 		if ' ' in team_name:
 			import_statement=fr"""
-				PUT file:///media/beast/Beast/DE/Python_programms/1_OG/data/{replaced_team_name}/*.csv @my_storage/{replaced_team_name}/
+				PUT file:{your_path}/{replaced_team_name}/*.csv @{your_internal_stage_name}/{replaced_team_name}/
 			"""
 			cursor.execute(import_statement)
 			conn.commit()
 		else:
 			import_statement=f"""
-				PUT file:///media/beast/Beast/DE/Python_programms/1_OG/data/{replaced_team_name}/*.csv @my_storage/{replaced_team_name}/
+				PUT file:{your_path}/{replaced_team_name}/*.csv @{your_internal_stage_name}/{replaced_team_name}/
 			"""
