@@ -97,7 +97,7 @@ To execute this program, please ensure that all required Python libraries and to
 
 ## ETL Journey/Workflow:
 <p><b>1. Data Scraping Process (Extract):</b></p>
-<p>We utilized the website <strong><a href='https://www.hindustantimes.com/cricket/players'>Source</strong> as our data source for scraping players information. The process involves the following steps:</p>
+<p>We utilized the website <strong><a href='https://www.hindustantimes.com/cricket/players'>Hindustan Times</strong> as our data source for scraping players information. The process involves the following steps:</p>
 <ul>
 <u><b>1. Website Interaction:</b></u>
 <ul>
