@@ -151,6 +151,7 @@ To execute this program, please ensure that all required Python libraries and to
     We have established a Snowflake pipeline to facilitate automated data ingestion into specific tables from an S3 bucket, utilizing an SQS notification channel.
     </li>
 </ul>
+<p><strong>Note: </strong> To enable automated data ingestion in Snowflake using Amazon S3 as the external stage, you need to set up folders within your S3 storage to store the data files and create an notification channel for auto-ingestion notifications.</p>
 
 ## Contact:
 <ul>Name : Vignesh Elumalai</ul>
